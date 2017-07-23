@@ -1,0 +1,8 @@
+hiddenmenu
+default 0
+timeout 0
+
+title   neXtgen 0.2 alpha
+        root   (fd0)
+        kernel /kernel.bin
+	module /initrd.img

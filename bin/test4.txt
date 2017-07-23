@@ -1,0 +1,5 @@
+Yet another test file...
+but this time with multiple lines
+	and tabs.
+
+All right, bye!

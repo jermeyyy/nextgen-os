@@ -1,0 +1,97 @@
+cmake_minimum_required(VERSION 3.7)
+project(neXtgen)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES
+        archive/neXtgen-14.03.11-16.01.iso
+        archive/neXtgen-18.03.11-00.02.iso
+        archive/neXtgen-ZE.iso
+        archive/~paging.c
+        archive/~sched.c
+        archive/~sched.h
+        bin/base.img
+        bin/initrd.img
+        bin/KernelCopy.exe
+        bin/make_initrd
+        bin/make_initrd.c
+        bin/make_initrd.exe
+        bin/make_initrd.exe.stackdump
+        bin/make_initrd.o
+        bin/MENU.LST
+        bin/mkisofs.exe
+        bin/test1.txt
+        bin/test2.txt
+        bin/test3.txt
+        bin/test4.txt
+        bin/wimadll.dll
+        image/bck/initrd.img
+        image/bck/neXtgen.img
+        image/bck/neXtgen.iso
+        image/initrd.img
+        image/MENU.LST
+        image/neXtgen.iso
+        inj/initrd.img
+        inj/kernel.bin
+        src/bootinfo.h
+        src/bootinfo.inc
+        src/cpuid.c
+        src/cpuid.h
+        src/cpuid_asm.asm
+        src/date.h
+        src/fs.c
+        src/fs.h
+        src/func.h
+        src/func.h.save
+        src/gdt.c
+        src/idt.c
+        src/idt.c.save
+        src/initrd.c
+        src/initrd.c.save
+        src/initrd.h
+        src/irq.c
+        src/isrs.c
+        src/kb.c
+        src/keyb.h
+        src/kheap.c
+        src/kheap.h
+        src/main.c
+        src/main.c.save
+        src/main.o
+        src/ordered_array.c
+        src/ordered_array.h
+        src/paging.c
+        src/paging.h
+        src/rtc.c
+        src/rtc.h
+        src/scrn.c
+        src/scrn.c.save
+        src/scrn.h
+        src/shell.c
+        src/start.asm
+        src/stdlib.c
+        src/stdlib.h
+        src/system.h
+        src/system.h.save
+        src/timer.c
+        src/va_list.h
+        src/win_mngr.c
+        src/win_mngr.h
+        bochs.log
+        date
+        head
+        initrd.img
+        link.ld
+        Makefile
+        Makefile.last)
+
+include_directories(.)
+include_directories(archive)
+include_directories(bin)
+include_directories(build)
+include_directories(image)
+include_directories(image/bck)
+include_directories(inj)
+include_directories(src)
+
+add_executable(neXtgen ${SOURCE_FILES})
